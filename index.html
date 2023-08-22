@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./reset.css" />
+  <link rel="stylesheet" href="./pages/pages.css" />
+  <link rel="stylesheet" href="./pages/header.css" />
+  <title>Domaha</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <h1>TravelTheWorld</h1>
+      <div class="popUp">
+        <ul class="nav__list ">
+          <li class="nav__item "><a href="https://24meridian.ru/">Contacts</a></li>
+          <li class="nav__item "><a href="https://dula.ru/contacts.html">Address</a></li>
+          <li class="nav__item "><a href="https://vandruy.by/popular_tourist_destinations/">Directions</a></li>
+        </ul>
+      </div>
+    </nav>
+    <button class="openBurger_button">
+      <div class="burgerMenu__line"></div>
+      <div class="burgerMenu__line"></div>
+      <div class="burgerMenu__line"></div>
+    </button>
+  </header>
+  
+  <main>
+    <h2 class="name">Dasha's FIRST SLIDER</h2>
+    <div class="slider__wrap">
+      <div class="slider__viewport" id="slider__viewport">
+        <div class="slider">
+          <div class="slide"><img src="./img/1.jpg" alt="wow" /></div>
+          <div class="slide"><img src="./img/2.jpg" alt="wow" /></div>
+          <div class="slide"><img src="./img/3.jpg" alt="wow" /></div>
+          <div class="slide"><img src="./img/4.jpg" alt="wow" /></div>
+          <div class="slide"><img src="./img/5.jpg" alt="wow" /></div>
+        </div>
+      </div>
+      <div class="slider__control">
+        <div class="slider__control-button slider__button_prev" id="slider__button_prev">back</div>
+        <div class="slider__control-button slider__button_next" id="slider__button_next">
+          next</div>
+      </div>
+      <div class="slider__pagination">
+        <div id="viewSlider" class="viewSlider">
+          <div class="viewSlide"></div>
+          <div class="viewSlide"></div>
+          <div class="viewSlide"></div>
+          <div class="viewSlide"></div>
+          <div class="viewSlide"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+  <script src="./motion.js"></script>
+  <script src="./burger.js"></script>
+</body>
+
+</html>
