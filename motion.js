@@ -10,6 +10,7 @@ let viewSlide = 0;
 viewSliders[viewSlide].style.backgroundColor = 'orange';
 
 btnNext.addEventListener('click', function () {
+    viewport = document.getElementById('slider__viewport').offsetWidth;
     console.log(viewport);
     console.log(viewSlide);
     console.log(viewSlide * viewport + 'px');
@@ -25,7 +26,7 @@ btnNext.addEventListener('click', function () {
         viewSliders[viewSliders.length - 1].style.backgroundColor = 'yellow';
     }
     slider.style.right = viewSlide * viewport + 'px';
-   
+
 })
 
 
@@ -40,7 +41,7 @@ btnPrev.addEventListener('click', function () {
         viewSliders[viewSliders.length - 1].style.backgroundColor = 'orange';
         viewSliders[0].style.backgroundColor = 'yellow';
     }
-    // slider.style.right = -viewSlide * viewport + 'px';
     slider.style.left = -viewSlide * viewport + 'px';
-  
+
 })
+
