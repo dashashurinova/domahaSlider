@@ -1,0 +1,44 @@
+h2{
+    padding-top: 30px;
+    margin-left: 50px;
+    font-size: 40px;
+    color: #8B0000;
+}
+
+.calc {
+    margin-left: 100px;
+    margin-top: 40px;
+    border: solid 2px #8b0058;
+    border-radius: 20px;
+    background-color:#E6E6FA;
+    width: 600px;
+    margin-bottom: 50px;
+}
+.calc__fieldset {
+    display: flex;
+    flex-direction: column;
+}
+.calc__label {
+    margin: 10px 10px;
+    font-size: 30px;
+    color: #8B0000;
+}
+.calc__inp {
+    border: solid 1px;
+    border-radius: 5px;
+    width: 350px;
+    height: 30px;
+    margin: 10px 10px;
+    font-size: 20px;
+}
+.calc__total {
+    font-size: 30px;
+    color: #8B0000;
+    font-weight: 900;
+    margin: 10px 10px;
+}
+.calc__text {
+    font-size: 30px;
+    color: #8B0000;
+    margin: 10px 10px;
+}

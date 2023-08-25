@@ -1,0 +1,28 @@
+.FAQ__container {
+}
+.FAQ__list {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+.FAQ__item {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid #8b0058;
+    font-size: 20px;
+}
+.FAQ__question {
+    background-color:#E6E6FA;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+}
+.FAQ__answer {
+    background-color:#f7f7f9;
+    padding: 10px;
+    display: none;
+}
+
+.open {
+    display:block;
+}

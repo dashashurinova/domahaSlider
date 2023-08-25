@@ -5,8 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./reset.css" />
-  <link rel="stylesheet" href="./pages/pages.css" />
+  <link rel="stylesheet" href="./pages/slider.css" />
   <link rel="stylesheet" href="./pages/header.css" />
+  <link rel="stylesheet" href="./pages/form.css" />
+  <link rel="stylesheet" href="./pages/calc.css" />
+  <link rel="stylesheet" href="./pages/FAQ.css" />
   <title>Domaha</title>
 </head>
 
@@ -15,10 +18,10 @@
     <nav class="nav">
       <h1>TravelTheWorld</h1>
       <div class="popUp">
-        <ul class="nav__list ">
-          <li class="nav__item "><a href="https://24meridian.ru/">Contacts</a></li>
-          <li class="nav__item "><a href="https://dula.ru/contacts.html">Address</a></li>
-          <li class="nav__item "><a href="https://vandruy.by/popular_tourist_destinations/">Directions</a></li>
+        <ul class="nav__list">
+          <li class="nav__item "><a href="#form__wrap">Contact us</a></li>
+          <li class="nav__item "><a href="#calc">Calculations</a></li>
+          <li class="nav__item "><a href="#FAQ">FAQ</a></li>
         </ul>
       </div>
     </nav>
@@ -29,8 +32,8 @@
     </button>
   </header>
 
-  <main>
-    <h2 class="name">Dasha's FIRST SLIDER</h2>
+  <main class="main">
+    <h2>Dasha's FIRST SLIDER</h2>
     <div class="slider__wrap">
       <div class="slider__viewport" id="slider__viewport">
         <div class="slider">
@@ -40,25 +43,133 @@
           <div class="slide"><img src="./img/4.jpg" alt="wow" /></div>
           <div class="slide"><img src="./img/5.jpg" alt="wow" /></div>
         </div>
-      <div class="slider__control">
-        <div class="slider__control-button slider__button_prev" id="slider__button_prev">back</div>
-        <div class="slider__control-button slider__button_next" id="slider__button_next">
-          next</div>
-      </div>
-      <div class="slider__pagination">
-        <div id="viewSlider" class="viewSlider">
-          <div class="viewSlide"></div>
-          <div class="viewSlide"></div>
-          <div class="viewSlide"></div>
-          <div class="viewSlide"></div>
-          <div class="viewSlide"></div>
+        <div class="slider__control">
+          <div class="slider__control-button slider__button_prev" id="slider__button_prev">back</div>
+          <div class="slider__control-button slider__button_next" id="slider__button_next">
+            next</div>
+        </div>
+        <div class="slider__pagination">
+          <div id="viewSlider" class="viewSlider">
+            <div class="viewSlide"></div>
+            <div class="viewSlide"></div>
+            <div class="viewSlide"></div>
+            <div class="viewSlide"></div>
+            <div class="viewSlide"></div>
+          </div>
         </div>
       </div>
     </div>
+
+
+    <div class="form__wrap" id="form__wrap">
+      <div class="form__title">Contact us</div>
+
+      <form action="php/order.php" class="form form-order" method="POST">
+        <div class="form__list">
+          <fieldset class="form__item">
+            <label for="" class="form__label">Name</label>
+            <input class="form__input" type="text" name="username" placeholder="Your name*" required minlength="2">
+          </fieldset>
+          <fieldset class="form__item">
+            <label for="" class="form__label">E-mail</label>
+            <input class="form__input" type="email" name="usermail" placeholder="Your mail*" required>
+          </fieldset>
+          <fieldset class="form__item">
+            <label for="" class="form__label">Tel</label>
+            <input class="form__input" type="tel" name="usertel" placeholder="Your tel" pattern="^\+7[0-9]{10}">
+          </fieldset>
+          <fieldset class="form__item">
+            <label for="" class="form__label">TG</label>
+            <input class="form__input" type="text" name="usertg" placeholder="Your tg">
+          </fieldset>
+
+          <fieldset class="form__item">
+            <button class="form__btn">Send</button>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+
+    <h2 id="calc">Calculate your holliday</h2>
+    <div class="calc">
+      <div class="calc__fieldset">
+        <label for="stars" class="calc__label">Number of stars</label>
+        <input type="number" class="calc__inp" id="stars" value="0" onchange=" calculateCost();" min="2" max="5">
+      </div>
+      <div class="calc__fieldset">
+        <label for="days" class="calc__label">How long are you going to stay in the hotel</label>
+        <input type="number" class="calc__inp" id="days" onchange=" calculateCost();" value="0" value="0" min="1"
+          max="30">
+      </div>
+      <div class="calc__fieldset">
+        <label for="days" class="calc__label">What kind of rest do you prefer</label>
+        <select name="" class="calc__inp" id="sharacteristics" onchange="calculateCost();">
+          <option value="0">----</option>
+          <option value="1">Sea holiday. I like to swim.</option>
+          <option value="2">I want to stay next to mountains.</option>
+          <option value="3">I have kids so port wentura should be close.</option>
+          <option value="4">Shopping and caffees should be everywhere.</option>
+        </select>
+      </div>
+      <div class="calc__fieldset">
+        <div class="calc__total">Your price: <span id="totalCost">X</span> $</div>
+      </div>
+      <div class="calc__fieldset">
+        <div class="calc__text">Contact us to book the tickets.</div>
+      </div>
+    </div>
+
+    <h2 id="FAQ">Frequently asked questions</h2>
+    <div class="FAQ__container">
+      <div class="FAQ__list">
+        <div class="FAQ__item">
+          <div class="FAQ__question">Travel to eat</div>
+          <div class="FAQ__answer">One thing you’ll never find on a suggested packing list is a diet. Leave it at home!
+            Just make sure you bring a healthy appetite and a willingness to taste new flavours and sample all of the
+            local delicacies. Remember, mimosas are totally acceptable at breakfast and dessert is always a good idea.
+            Indulge, go back for seconds and exercise when you get home.</div>
+        <img class="FAQ__answer" src="./img/q1.jpg" alt=""></div>
+        
+        <div class="FAQ__item">
+          <div class="FAQ__question">Travel to learn</div>
+          <div class="FAQ__answer">Not all classrooms have four walls and travel is the best way to immerse yourself in
+            geography, history, culture, gastronomy, languages, biology … you name it. Travel enriches the mind and
+            educates us far beyond any textbook or travel guide. Not only do curious travellers learn about different
+            landscapes, languages and lifestyles; glean fascinating facts while observing wild animals in their natural
+            habitat; delve into a region’s history and taste the local flavours; but they also learn about themselves
+            (and
+            each other) along the way.
+            <img class="FAQ__answer" src="./img/q2.png" alt=""></div>
+        </div>
+        <div class="FAQ__item">
+          <div class="FAQ__question">Travel to escape reality</div>
+          <div class="FAQ__answer">We all need to fall off the radar and escape reality every once in a while. Travel
+            allows us to enjoy complete anonymity in new and unexplored territories. It gives us absolute freedom to
+            live
+            in the moment and it allows us to be anyone, to go anywhere and to do anything. The best part of my
+            six-month
+            trip around the world, way back when, was the freedom of being able to just wake up and pick a spot anywhere
+            on the map and find a way to get there. Travel enables us to be spontaneous and seek new experiences.
+            <img class="FAQ__answer" src="./img/q3.jpeg" alt=""></div>
+        </div>
+      </div>
+
+    </div>
+
+
+
   </main>
+
+
+
+
+
   <footer></footer>
-  <script src="./motion.js"></script>
+  <script src="./slider.js"></script>
   <script src="./burger.js"></script>
+  <script src="./calc.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="./FAQ.js"></script>
 </body>
 
 </html>
