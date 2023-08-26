@@ -14,10 +14,10 @@ popUp.classList.remove('open');
 navList.classList.remove('open'); 
 }
 
+navItems.forEach((link) => { 
+link.addEventListener("click", closeBurgerMenu); }); 
+
 body.onclick = closeBurgerMenu;
-navItems.onclick = closeBurgerMenu;
-navItems[1].onclick = closeBurgerMenu;
-navItems[2].onclick = closeBurgerMenu;
 
 openBurger.addEventListener('click', function(){
 popUp.classList.toggle('open');
