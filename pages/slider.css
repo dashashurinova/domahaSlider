@@ -9,6 +9,7 @@ margin: 0 auto;
 margin:  20px auto;
 width: 100%;
 overflow: hidden;
+position: relative;
 /* border-radius: 20px; */
 }
 
@@ -34,7 +35,7 @@ border-radius: 30px;
 .slider__control-button {
 padding: 20px;
 position: absolute;
-top: 50%;
+top: 80%;
 border: 2px solid #8b0058;
 background-color:#E6E6FA;
 border-radius: 40px;
@@ -49,10 +50,10 @@ background-color: #716df5;
 }
 
 .slider__button_prev {
-left: 10%;
+left: 0%;
 }
 .slider__button_next {
-right: 10%;
+right: 0%;
 }
 
 #viewSlider{
